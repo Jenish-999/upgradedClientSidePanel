@@ -1,0 +1,4 @@
+export const types = {
+  VIEW_DATA_SUCCESS: "VIEW_DATA_SUCCESS",
+  VIEW_DATA_FAIL: "VIEW_DATA_FAIL",
+};
