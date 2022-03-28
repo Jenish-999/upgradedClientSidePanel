@@ -327,6 +327,7 @@ const Details = () => {
                             <th className="text-left ccc">Age</th>
                             <th className="text-left ccc">Gender</th>
                             <th className="text-left ccc">Family Members</th>
+                            <th className="text-left ccc">Status</th>
                           </tr>
                         </thead>
 
@@ -364,6 +365,9 @@ const Details = () => {
                                 </button> */}
                                         {allMembersDetails[id].totalMembers}
                                       </td>
+                                      <td className="text-left custom-td">
+                                        {allMembersDetails[id].status}
+                                      </td>
                                     </tr>
                                   );
                                 }
@@ -397,6 +401,9 @@ const Details = () => {
                                 >
                                 </button> */}
                                       {searchResult[id].totalMembers}
+                                    </td>
+                                    <td className="text-left custom-td">
+                                      {searchResult[id].status}
                                     </td>
                                   </tr>
                                 );

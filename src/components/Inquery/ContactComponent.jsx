@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { messageSendFunction } from "../../redux/inquiryReducer/inquiryAction";
+
 const ContactComponent = () => {
   const dispatch = useDispatch();
 
@@ -156,7 +157,8 @@ const ContactComponent = () => {
             </div>
             <div className="col-lg-3">
               <div className="right-info">
-                <ul>
+                <img src="" alt="" />
+                {/* <ul>
                   <li>
                     <h6>Phone Number</h6>
                     <span>991-022-3344</span>
@@ -221,7 +223,7 @@ const ContactComponent = () => {
                       </span>
                     </div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>

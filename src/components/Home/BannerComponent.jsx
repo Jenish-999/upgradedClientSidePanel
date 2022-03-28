@@ -1,6 +1,11 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
 const BannerComponent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <>
       {/* ***** Main Banner Area Start ***** */}
@@ -14,12 +19,12 @@ const BannerComponent = () => {
               <div className="col-lg-12">
                 <div className="caption">
                   <h6>Hello Members</h6>
-                  <h2>Welcome to Green Park Luxuria</h2>
-                  <p>
+                  <h2 data-aos="fade-right">Welcome to Green Park Luxuria</h2>
+                  <p data-aos="fade-left">
                     Green Luxuria offers multiple upgraded services to society
                     members. Create your own fresh experiences, or build
                     powerful digital relationship with members and also go
-                    digital. If you have query always 24/7 services are
+                    digital. If you have query always seek for services are
                     avaiable. Do not pause, take action.
                   </p>
                   <div className="main-button-red">

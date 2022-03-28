@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { allNoticeDisplayFunction } from "../../redux/noticeReducer/action";
-
+import AOS from "aos";
 const NoticeComponent = () => {
   const allNoticeStorage = useSelector(
     (state) => state.notice.allNoticeStorage
@@ -14,11 +14,18 @@ const NoticeComponent = () => {
   }, []);
 
   console.log("All Notice Data", allNoticeStorage);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <>
       {/* ***** Main Notice Now Area Start ***** */}
       <section className="apply-now" id="apply">
+        <div className="section-heading text-center" data-aos="zoom-in">
+          <h2>Notices Board</h2>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col-lg-6 align-self-center">
@@ -75,11 +82,16 @@ const NoticeComponent = () => {
                       </p>
 
                       {Object.keys(allNoticeStorage).map((id, indx) => {
-                        return (
-                          <p className="f-5 text-capitalize text-dark" key={id}>
-                            • {allNoticeStorage[id]}
-                          </p>
-                        );
+                        if (allNoticeStorage[id].isActive === true) {
+                          return (
+                            <p
+                              className="f-5 text-capitalize text-dark"
+                              key={id}
+                            >
+                              • {allNoticeStorage[id].description}
+                            </p>
+                          );
+                        }
                       })}
                     </div>
                   </div>

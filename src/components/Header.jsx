@@ -31,33 +31,33 @@ const Header = () => {
                 {/* ***** Menu Start ***** */}
                 <ul className="nav">
                   <li className="scroll-to-section">
-                    <NavLink to="/" activeClassName="active">
+                    <NavLink to="/" activeclassname="active">
                       Home
                     </NavLink>
                   </li>
                   {isMemberLogin && isMemberLogin ? (
                     <li>
-                      <Link to="/details" activeClassName="active">
+                      <NavLink to="/details" activeclassname="active">
                         Details
-                      </Link>
+                      </NavLink>
                     </li>
                   ) : (
                     ""
                   )}
 
                   <li className="scroll-to-section">
-                    <NavLink to="/gallery" activeClassName="active">
+                    <NavLink to="/gallery" activeclassname="active">
                       Photogravure
                     </NavLink>
                   </li>
 
                   <li className="scroll-to-section">
-                    <NavLink to="/about" activeClassName="active">
+                    <NavLink to="/about" activeclassname="active">
                       About Us
                     </NavLink>
                   </li>
                   <li className="scroll-to-section">
-                    <NavLink to="/inquery" activeClassName="active">
+                    <NavLink to="/inquery" activeclassname="active">
                       Contact Us
                     </NavLink>
                   </li>

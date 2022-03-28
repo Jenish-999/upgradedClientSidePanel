@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { viewDataFunction } from "../../redux/viewReducer/action";
+import AOS from "aos";
 
 const ProfileEvents = () => {
   const getAllEvents = useSelector((state) => state.events.viewDataStorage);
@@ -26,6 +27,11 @@ const ProfileEvents = () => {
     "Nov",
     "Dec",
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   return (
     <>
@@ -34,11 +40,12 @@ const ProfileEvents = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="section-heading">
+              <div className="section-heading" data-aos="zoom-in">
                 <h2>Profile & Events</h2>
               </div>
             </div>
             {/* Profile Start */}
+            {/* <div > */}
             <div className="col-lg-4">
               <div className="categories">
                 <h4>Secretary Profile</h4>
@@ -70,6 +77,8 @@ const ProfileEvents = () => {
                 </div>
               </div>
             </div>
+            {/* </div> */}
+
             {/* Events Start */}
             <div className="col-lg-8">
               <div className="row">
