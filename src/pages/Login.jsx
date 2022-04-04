@@ -137,8 +137,9 @@ border: none;
   border-bottom: 2px solid #d1d1d4;
   background: none;
   padding: 10px;
+  font-size: 14px;
   padding-left: 24px;
-  font-weight: 700;
+  font-weight: 300;
   width: 75%;
   transition: 0.2s;
 

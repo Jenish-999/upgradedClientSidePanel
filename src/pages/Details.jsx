@@ -8,9 +8,7 @@ import {
 } from "../redux/membersRedux/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-// import "../../public/assets/css/details-comp.css";
-// import "/public/assets/css/details-comp.css";
-// import "../style/details-comp.css";
+import { getMaintenanceFunction } from "../redux/maintenanceReducer/action";
 
 const Details = () => {
   const [searchWing, setSearchWing] = useState("");
@@ -20,12 +18,16 @@ const Details = () => {
 
   const isMemberLogin = useSelector((state) => state.members.isMemberLogin);
 
-  const { fullName, age, gender, houseNo, totalMembers, email, image } =
+  const { fullName, age, gender, houseNo, totalMembers, email, image, id } =
     memberDetails;
 
   const loading = useSelector((state) => state.members.loading);
 
   const memberData = useSelector((state) => state.members.memberData);
+
+  const maintenanceData = useSelector(
+    (state) => state.maintenance.maintenanceStorage
+  );
 
   const allMembersDetails = useSelector(
     (state) => state.members.allMembersDetails
@@ -35,11 +37,10 @@ const Details = () => {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {}, []);
-
   useEffect(() => {
     if (memberDetails && memberDetails !== "") {
       console.log("SINGLE USER DATA DETAILS ID", memberDetails);
+      dispatch(getMaintenanceFunction(id));
     }
   }, [memberDetails]);
 
@@ -49,7 +50,6 @@ const Details = () => {
 
   useEffect(() => {
     if (memberData && memberData !== "") {
-      // console.log("FINAL MEMBER DATA FOR LOGIN", memberData.localId);
       dispatch(memberDetailsFunction(memberData.localId));
     }
   }, [memberData]);
@@ -57,6 +57,7 @@ const Details = () => {
   useEffect(() => {
     if (!isMemberLogin) {
       navigate("/");
+      dispatch({ type: "EMPTY_DATA_MAINTENANCE" });
     }
   }, [isMemberLogin]);
 
@@ -109,6 +110,22 @@ const Details = () => {
     console.log("SelectWingData : ", selectedWingData);
     setSearchResult(selectedWingData);
   }
+
+  let months = [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <>
       <Wrapper>
@@ -265,30 +282,51 @@ const Details = () => {
                         <thead>
                           <tr>
                             <th className="text-left">Month</th>
+                            <th className="text-left">Paid Date</th>
+                            <th className="text-left">Due Date</th>
                             <th className="text-left">Amount</th>
+                            <th className="text-left"></th>
                           </tr>
                         </thead>
                         <tbody className="table-hover">
-                          <tr>
-                            <td className="text-left">January</td>
-                            <td className="text-left">$ 50,000.00</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">February</td>
-                            <td className="text-left">$ 10,000.00</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">March</td>
-                            <td className="text-left">$ 85,000.00</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">April</td>
-                            <td className="text-left">$ 56,000.00</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">May</td>
-                            <td className="text-left">$ 98,000.00</td>
-                          </tr>
+                          {maintenanceData &&
+                            Object.keys(maintenanceData).map((id, indx) => {
+                              var d = new Date(maintenanceData[id].dueDate);
+                              var monthName = months[d.getMonth()]; // "July" (or current month)
+                              return (
+                                <tr key={id}>
+                                  <TableData1 className="text-left">
+                                    {monthName}
+                                  </TableData1>
+
+                                  <TableData2 className="text-left">
+                                    {maintenanceData[id].currentDate}
+                                  </TableData2>
+                                  <TableData3 className="text-left">
+                                    {maintenanceData[id].dueDate}
+                                  </TableData3>
+                                  <TableData4 className="text-left">
+                                    <ul className="px-0">
+                                      <li className="d-flex justify-content-between">
+                                        <span>Annual Amt :</span>
+                                        <span>
+                                          {maintenanceData[id].annualAmt}/-
+                                        </span>
+                                      </li>
+                                      <li className="d-flex justify-content-between">
+                                        <span>Penalty Amt :</span>
+                                        <span>
+                                          {maintenanceData[id].panelty}/-
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </TableData4>
+                                  <TableData5 className="text-left">
+                                    PRINT
+                                  </TableData5>
+                                </tr>
+                              );
+                            })}
                         </tbody>
                       </table>
                     </div>
@@ -670,6 +708,43 @@ td.text-right {
   text-align: right;
 }
 
+`;
+
+const TableData1 = Styled.td`
+transition: all 2s ease-in-out;
+
+      :hover{
+        color: pink;
+      }
+`;
+const TableData2 = Styled.td`
+transition: all 1.5s ease-in-out;
+
+      :hover{
+        color: pink;
+      }
+`;
+const TableData3 = Styled.td`
+transition: all 1s ease-in-out;
+
+      :hover{
+        color: pink;
+      }
+`;
+const TableData4 = Styled.td`
+transition: all 0.8s ease-in-out;
+
+      :hover{
+        color: pink;
+      }
+`;
+const TableData5 = Styled.td`
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+
+      :hover{
+        color: pink;
+      }
 `;
 
 export default Details;

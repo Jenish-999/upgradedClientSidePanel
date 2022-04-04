@@ -69,15 +69,14 @@ const NoticeComponent = () => {
                     <h4>
                       Access
                       <span className="text-secondary custom-text-underline">
-                        {" "}
                         NOTICE BOARD
                       </span>
                     </h4>
                   </div>
                   {/* Main notice Area Start */}
-                  <div className="container-fluid p-2 border border-light shadow rounded my-3 bg-grad-color-secondary">
+                  <div className="container-fluid img-board-background p-2 border border-light shadow rounded my-3 bg-grad-color-secondary">
                     <div className="d-flex flex-column align-items-left justify-content-between">
-                      <p className="text-uppercase text-bold text-secondary">
+                      <p className="text-uppercase text-bold text-light ">
                         Important Notices
                       </p>
 
@@ -85,7 +84,7 @@ const NoticeComponent = () => {
                         if (allNoticeStorage[id].isActive === true) {
                           return (
                             <p
-                              className="f-5 text-capitalize text-dark"
+                              className="f-5 text-capitalize text-light"
                               key={id}
                             >
                               • {allNoticeStorage[id].description}
@@ -97,45 +96,52 @@ const NoticeComponent = () => {
                   </div>
                   {/* Main notice Area End */}
                   {/* Main notice Area Start */}
-                  <div className="container-fluid p-2 border border-light shadow rounded my-3 bg-grad-color-primary">
+                  <div className="container-fluid img-rules-background p-2 border border-light shadow rounded my-3 bg-grad-color-primary">
                     <div className="d-flex flex-row align-items-left justify-content-between mb-2">
-                      <p className="text-uppercase text-bold text-secondary">
+                      <p className="text-uppercase text-bold text-light">
                         Rules & Regulations
                       </p>
                     </div>
                     {/* Quick event particle Area Start */}
-                    <div className="d-flex flex-column border p-1 rounded align-items-left justify-content-between mb-2">
-                      <div className="f-5 text-capitalize text-dark">
-                        <ul>
-                          <li className="border-bottom">
+                    <div className="d-flex flex-column p-0 rounded align-items-left justify-content-between mb-2">
+                      <div
+                        className="text-capitalize text-light"
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: "200",
+                          paddingLeft: "0px !important",
+                        }}
+                      >
+                        <ul style={{ paddingLeft: "5px", width: "73%" }}>
+                          <li className="mb-2">
                             ► Penalties are applied against the damaged caused
                             while shifting the household goods in lifts,
                             corridors, garden areas etc by any member of the
                             society.{" "}
                           </li>
-                          <li className="border-bottom">
+                          <li className=" mb-2">
                             ► No member can occupy the area near their front
                             doors, corridors, passage for their personal usage.
                           </li>
-                          <li className="border-bottom">
+                          <li className=" mb-2">
                             ► Salesmen, vendors or any other sellers are not
                             allowed to enter the premises. Owners residing are
                             not allowed to rent their flats for any commercial
                             use as this might create trouble to other society
                             members.
                           </li>
-                          <li className="border-bottom">
+                          <li className=" mb-2">
                             ► Wastage and over usage of water is not allowed.
                             Flat owners will be considered responsible for this
                             act and they have to pay the penalty costs for the
                             same.
                           </li>
-                          <li className="border-bottom">
+                          <li className=" mb-2">
                             ► Maintenance charges should be paid from to time.
                             If failed after multiple warnings, any legal action
                             can be processed against the respective person.
                           </li>
-                          <li className="border-bottom">
+                          <li className=" mb-2">
                             ► Washing of vehicles, cars, bikes etc in the
                             premises is strictly prohibited. Instead you can use
                             washing area of the society.

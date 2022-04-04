@@ -162,11 +162,14 @@ const LoginComponent = () => {
                 </Login_Submit>
               </Logincls>
               <Social_Login>
-                <h3>Digital Society</h3>
+                <h3 className="text-white" style={{ margin: "20px 0 10px 0" }}>
+                  Digital Society
+                </h3>
                 <footer
                   className="text-center"
                   style={{
-                    fontSize: "10px",
+                    fontSize: "5px",
+                    fontWeight: "200",
                     textShadow: "1px 1px 4px rgba(0, 0, 0, 0.322)",
                     color: "white",
                   }}

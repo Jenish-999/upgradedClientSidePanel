@@ -19,7 +19,7 @@ const ParticleComponent = () => {
           background: {
             color: {
               // value: "#7875B5",
-              // value: "#5337968e",
+              // value: "#000000",
               value: "#1F262C",
             },
           },
@@ -41,7 +41,7 @@ const ParticleComponent = () => {
                 distance: 400,
                 duration: 2,
                 opacity: 0.8,
-                size: 40,
+                size: 30,
               },
               push: {
                 quantity: 1,
@@ -55,10 +55,12 @@ const ParticleComponent = () => {
           particles: {
             color: {
               // value: "#170055",
-              value: "#FFE61B",
+              // value: "#FFE61B",
+              value: ["#4285f4", "#34A853", "#FBBC05", "#EA4335"],
             },
             links: {
               value: "#FFE61B",
+              // value: ["#4285f4", "#34A853", "#FBBC05", "#EA4335"],
               // color: "#005792",
               distance: 150,
               enable: true,
@@ -69,7 +71,7 @@ const ParticleComponent = () => {
               enable: true,
             },
             move: {
-              direction: "right",
+              direction: ["bottom", "right"],
               enable: true,
               outMode: "bounce",
               random: false,
@@ -81,13 +83,13 @@ const ParticleComponent = () => {
                 enable: true,
                 area: 900,
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
               value: 0.5,
             },
             shape: {
-              type: ["circle", "triangle", "star", "square"],
+              type: ["circle"],
             },
             size: {
               random: true,

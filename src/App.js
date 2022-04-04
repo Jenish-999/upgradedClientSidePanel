@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import Error404 from "./pages/Error404";
 import "react-toastify/dist/ReactToastify.css";
+import PrintComponent from "./PrintComponent";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="*" element={<Error404 />} />
+        <Route path="/PrintComponent" element={<PrintComponent />} />
       </Routes>
     </>
   );
