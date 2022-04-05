@@ -10,7 +10,7 @@ const Footer = () => {
         <p>
           Copyright © 2022 Digital Society pvt Ltd. All Rights Reserved.
           <br />
-          Design:{" "}
+          Designed by:{" "}
           <a
             href="https://twitter.com/jenishp96834172"
             target="_parent"

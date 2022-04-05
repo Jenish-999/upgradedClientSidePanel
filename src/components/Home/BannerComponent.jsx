@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import { NavLink } from "react-router-dom";
 const BannerComponent = () => {
   useEffect(() => {
     AOS.init({
@@ -29,7 +30,7 @@ const BannerComponent = () => {
                   </p>
                   <div className="main-button-red">
                     <div className="scroll-to-section">
-                      <a href="/">Join Us Now!</a>
+                      <NavLink to="/inquery">Join Us Now!</NavLink>
                     </div>
                   </div>
                 </div>

@@ -176,7 +176,7 @@ a {
 }
 
 a:hover {
-  color: #fc3;
+  color: rgb(255, 191, 0);
 }
 
 h1,
@@ -290,6 +290,7 @@ body {
 
 .main-button-red a:hover {
   opacity: 0.9;
+  color: rgb(171, 149, 149) !important;
 }
 
 .main-button-yellow a {
@@ -1058,6 +1059,7 @@ section.upcoming-meetings .categories .main-button-red {
 section.upcoming-meetings .categories .main-button-red a {
   width: 100%;
   text-align: center;
+ 
 }
 
 .meeting-item {
@@ -1688,7 +1690,7 @@ section.meetings-page .main-button-red a {
 section.meetings-page .pagination ul li.active a,
 section.meetings-page .pagination ul li a:hover {
   background-color: #a12c2f;
-  color: #fff;
+  color: #fff !important;
 }
 
 .meeting-single-item .thumb {
