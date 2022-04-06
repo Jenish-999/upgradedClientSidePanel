@@ -21,7 +21,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/inquery" element={<Inquery />} />
         <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
+        {/* <Route path="/events" element={<Events />} /> */}
         <Route path="*" element={<Error404 />} />
       </Routes>
     </>

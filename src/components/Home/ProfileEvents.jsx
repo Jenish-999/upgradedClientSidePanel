@@ -66,7 +66,7 @@ const ProfileEvents = () => {
                       />
                     </div>
                     <div className="content-container">
-                      <p className="text-dark fs-6 text-bold text-uppercase">
+                      <p className="text-dark fs-6 text-bold p-2 text-uppercase">
                         Rajesh Kankotiya
                       </p>
                     </div>

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import Styled from "styled-components";
 
 const HeadingDisplay = ({ subject, desp }) => {
   useEffect(() => {
@@ -13,9 +14,9 @@ const HeadingDisplay = ({ subject, desp }) => {
       <section className="heading-page header-text" id="top">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12" data-aos="zoom-in-down">
+            <div className="col-lg-12 text-light" data-aos="zoom-in-down">
               <h6>{subject}</h6>
-              <h2>{desp}</h2>
+              <Htag>{desp}</Htag>
             </div>
           </div>
         </div>
@@ -24,5 +25,16 @@ const HeadingDisplay = ({ subject, desp }) => {
     </>
   );
 };
+
+export const Htag = Styled.p`
+  font-size: 1.80em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  @media screen and (max-width : 729px){ 
+      font-size: 1em;
+      font-weight: 200;
+  }
+`;
 
 export default HeadingDisplay;

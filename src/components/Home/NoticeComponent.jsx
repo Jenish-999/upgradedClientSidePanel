@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Styled from "styled-components";
+
 import { allNoticeDisplayFunction } from "../../redux/noticeReducer/action";
 import AOS from "aos";
 const NoticeComponent = () => {
@@ -103,7 +105,7 @@ const NoticeComponent = () => {
                       </p>
                     </div>
                     {/* Quick event particle Area Start */}
-                    <div className="d-flex flex-column p-0 rounded align-items-left justify-content-between mb-2">
+                    <RulesMainContainer className="d-flex flex-column p-0 rounded align-items-left justify-content-between mb-2">
                       <div
                         className="text-capitalize text-light"
                         style={{
@@ -112,7 +114,7 @@ const NoticeComponent = () => {
                           paddingLeft: "0px !important",
                         }}
                       >
-                        <ul style={{ paddingLeft: "5px", width: "73%" }}>
+                        <UlTag>
                           <li className="mb-2">
                             ► Penalties are applied against the damaged caused
                             while shifting the household goods in lifts,
@@ -151,9 +153,9 @@ const NoticeComponent = () => {
                             irresponsible person is found smoking in the no
                             smoking zone, he/she shall be charged with penalty.
                           </li>
-                        </ul>
+                        </UlTag>
                       </div>
-                    </div>
+                    </RulesMainContainer>
                     {/* Quick event particle Area End */}
                   </div>
                   {/* Main notice Area End */}
@@ -167,5 +169,21 @@ const NoticeComponent = () => {
     </>
   );
 };
+
+export const RulesMainContainer = Styled.div`
+@media screen and (max-width : 729px){   
+  text-align: justify;
+}
+`;
+
+export const UlTag = Styled.ul`
+  padding-left: 5px;
+  width: 73%;
+
+@media screen and (max-width : 729px){   
+  padding-left : 0px;
+  width: 100%;
+}
+`;
 
 export default NoticeComponent;
