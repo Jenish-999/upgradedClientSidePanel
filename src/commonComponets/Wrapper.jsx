@@ -6,9 +6,7 @@ const Wrapper = ({ children }) => {
   return (
     <>
       <div className="d-flex flex-column min-vh-100">
-        <nav>
-          <Header />
-        </nav>
+        <Header />
         <main className="flex-fill">{children}</main>
         <Footer />
       </div>

@@ -42,7 +42,7 @@ const FirstSection = () => {
             data-aos-offset="250"
             data-aos-easing="ease-in-sine"
           >
-            ABOUT US
+            SOCIETY
           </a>
         </AboutUsInfo>
       </AboutUsSection>

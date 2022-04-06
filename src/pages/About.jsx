@@ -45,6 +45,11 @@ flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
 position: relative;
+@media screen and (max-width : 729px){   
+  width: 100%;
+  height: 70%;
+}
+
 `;
 
 export const AboutUsImage = Styled.div`
@@ -54,10 +59,14 @@ position: absolute;
   height: 100%;
   width: 53%;
   overflow: hidden;
+    @media screen and (max-width : 729px){   
+      width: 100%;
+      height: 0;
+}
 `;
 
 export const AboutUsInfo = Styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-evenly;
@@ -99,6 +108,31 @@ display: flex;
         // transform: translateY(10px);
       
       }
+
+      @media screen and (max-width : 729px){   
+        margin-right: 0px;
+        margin-left: 0px;
+        width:auto; 
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        h2{
+          color: white;
+          font-size: 20pt;
+          text-align: right;
+        }
+  
+        p{
+          color: white;
+          font-size: 10pt;
+          text-align: center;
+
+        }
+  
+       
+  }
 `;
 
 export const HistorySection = Styled.div`
@@ -110,6 +144,9 @@ width: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
+  @media screen and (max-width : 729px){   
+    height: 100%;
+}
 
 `;
 
@@ -117,9 +154,18 @@ export const HistoryImage = Styled.div`
 position: absolute;
   top: 0;
   left: 0;
-  max-width: 820px;
   height: 100%;
+  width: 53%;
   overflow: hidden;
+  
+  @media screen and (max-width : 729px){   
+    width: 100%;
+    height:0;
+}
+
+
+
+
 `;
 
 export const HistoryInfo = Styled.div`
@@ -164,6 +210,26 @@ z-index: 2;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         // transform: translateX(10px);
       }
+
+      @media screen and (max-width : 729px){   
+        margin-right: 0px;
+        margin-left: 0px;
+        width:auto; 
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        h2{
+          font-size: 30pt;
+          text-align: center;
+        }
+  
+        p{
+          text-align: center;
+        }
+  }
+
 
 `;
 

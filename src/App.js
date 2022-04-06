@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import Error404 from "./pages/Error404";
 import "react-toastify/dist/ReactToastify.css";
-
+import "./App.css";
 function App() {
   return (
     <>

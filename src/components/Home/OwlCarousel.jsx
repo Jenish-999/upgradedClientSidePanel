@@ -78,13 +78,19 @@ const OwlCarousel = () => {
           <div className="row">
             <div className="col-md-12 col-lg-12">
               <Swiper
-                slidesPerView={3}
                 spaceBetween={30}
-                slidesPerGroup={3}
                 loop={true}
                 loopFillGroupWithBlank={false}
                 pagination={{
                   clickable: true,
+                }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                  },
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}

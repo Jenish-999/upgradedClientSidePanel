@@ -1,0 +1,9 @@
+.right-info{
+    display: none!important;
+}
+
+@media screen and (min-width : 992px){
+    .right-info{
+        display: block!important;
+    }
+}
