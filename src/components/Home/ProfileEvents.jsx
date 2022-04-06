@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Styled from "styled-components";
+
 import { viewDataFunction } from "../../redux/viewReducer/action";
 import AOS from "aos";
 
@@ -50,7 +52,7 @@ const ProfileEvents = () => {
               <div className="categories">
                 <h4>Secretary Profile</h4>
                 <div className="container-fluid p-1">
-                  <div className="d-flex justify-content-between align-items-center">
+                  <ProfileManage className="d-flex justify-content-between align-items-center">
                     <div className="img-container">
                       <img
                         src="assets/images/Profiles/habibProfile.jpg"
@@ -70,7 +72,7 @@ const ProfileEvents = () => {
                         Rajesh Kankotiya
                       </p>
                     </div>
-                  </div>
+                  </ProfileManage>
                 </div>
                 <div className="main-button-red">
                   <Link to="/inquery">Send Query || Complains</Link>
@@ -116,5 +118,11 @@ const ProfileEvents = () => {
     </>
   );
 };
+
+export const ProfileManage = Styled.div`
+@media screen and (max-width : 729px){   
+  flex-direction: column;
+}
+`;
 
 export default ProfileEvents;
