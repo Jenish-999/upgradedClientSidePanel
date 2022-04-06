@@ -55,7 +55,7 @@ const ProfileEvents = () => {
                   <ProfileManage className="d-flex justify-content-between align-items-center">
                     <div className="img-container">
                       <img
-                        src="assets/images/Profiles/habibProfile.jpg"
+                        src="assets/images/Profiles/secretory.jpg"
                         alt="profileImg"
                         className="img-fluid shadow-lg"
                         style={{
@@ -63,7 +63,8 @@ const ProfileEvents = () => {
                           height: "100px",
                           width: "100px",
                           backgroundPosition: "center",
-                          backgroundSize: "cover",
+                          // backgroundSize: "cover",
+                          objectFit: "cover",
                         }}
                       />
                     </div>
