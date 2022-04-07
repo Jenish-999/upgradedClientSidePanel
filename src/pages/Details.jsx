@@ -144,14 +144,14 @@ const Details = () => {
             <div className="container-wapper bg-container">
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-md-6  p-4">
+                  <div className="col-md-6 col-sm-12 p-4">
                     <div className="container-fluid">
                       <div className="card card-cc">
                         <h5 className="card-header text-dark">
                           Members Details
                         </h5>
                         <div
-                          className="d-flex justify-content-between"
+                          className="d-flex justify-content-between custom_flex_container"
                           style={{ backgroundColor: "#219f9533 !important" }}
                         >
                           <div className="card-img-wrapper">
@@ -268,17 +268,17 @@ const Details = () => {
                             <p className="card-text">
                               Geniun person of our society
                             </p>
-                            <a href="#" className="btn btn-primary">
+                            {/* <a href="#" className="btn btn-primary">
                               Check
-                            </a>
+                            </a> */}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6  p-4 ">
-                    <div className="container-fluid">
-                      <table className="table-fill">
+                  <div className="col-md-6 col-sm-12  p-4 ">
+                    <div className="container-fluid table-responsive">
+                      <table className="table-fill table">
                         <thead>
                           <tr>
                             <th className="text-left">Month</th>
@@ -335,7 +335,7 @@ const Details = () => {
                 </div>
                 <div className="row">
                   <div className="col-md-12  p-3">
-                    <div className="container-fluid">
+                    <div className="container-fluid table-responsive">
                       <div className="wrapper-container-for-two mb-1 d-flex justify-content-between">
                         <h5 className="text-uppercase text-left">
                           Members View
@@ -472,7 +472,6 @@ const Details = () => {
 
 export const ContainerWapper = Styled.div`
 
-
 .card-custom-color {
   background-color: #219f9533 !important;
 }
@@ -502,10 +501,37 @@ export const ContainerWapper = Styled.div`
                       .card-title{
                         margin-bottom: 0.75rem !important;
                       }
+
+                      
+                      
+            }
+
+            @media screen and (max-width : 729px){   
+              .card-body  {
+                height: 100%;
+                width: 100%;
+                left: 20%;
+                font-size: 12px;
+                background-color: rgba(11, 156, 132, 0.322);
+                backdrop-filter: saturate(120%) blur(5px);
+                .card-title{
+                      color:#fff;
+                      margin-bottom: 0.75rem !important;
+                    }
+              }
             }
 
 
       }
+
+
+      @media screen and (max-width : 729px){   
+        background: #9999;
+        .custom_flex_container{
+          flex-direction: column;
+        }
+      }
+     
 
   .card-img-wrapper {
     display: flex;
@@ -526,11 +552,10 @@ export const ContainerWapper = Styled.div`
         img {
           transition: 1.5s ease;
         }
+
   }
 
-
   .card-body{
-
     position: absolute;
     bottom: 0;
     left: 40%;
@@ -709,7 +734,6 @@ td.text-right {
 }
 
 `;
-
 const TableData1 = Styled.td`
 transition: all 2s ease-in-out;
 
