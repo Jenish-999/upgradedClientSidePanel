@@ -90,6 +90,9 @@
     <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
     <script src="%PUBLIC_URL%/assets/js/main.js"></script>
     <script>
+      $(".menu-trigger").click(function () {
+        $(".header-area .main-nav .nav").slideToggle();
+      });
       //according to loftblog tut
       $(".nav li:first").addClass("active");
 

@@ -18,13 +18,13 @@ const SocFactsComponent = () => {
                     <div className="col-12">
                       <div className="count-area-content percentage">
                         <div className="count-digit">90</div>
-                        <div className="count-title">Succesed Services</div>
+                        <div className="count-title">Accomplished Services</div>
                       </div>
                     </div>
                     <div className="col-12">
                       <div className="count-area-content">
-                        <div className="count-digit">852</div>
-                        <div className="count-title">A Wings Points</div>
+                        <div className="count-digit">52</div>
+                        <div className="count-title">Security (CCTV)</div>
                       </div>
                     </div>
                   </div>
@@ -33,14 +33,14 @@ const SocFactsComponent = () => {
                   <div className="row">
                     <div className="col-12">
                       <div className="count-area-content new-students">
-                        <div className="count-digit">2345</div>
-                        <div className="count-title">Current Members</div>
+                        <div className="count-digit">208</div>
+                        <div className="count-title">Annual Home</div>
                       </div>
                     </div>
                     <div className="col-12">
                       <div className="count-area-content">
-                        <div className="count-digit">562</div>
-                        <div className="count-title">B Wings Points</div>
+                        <div className="count-digit">10</div>
+                        <div className="count-title">Domestic Workers</div>
                       </div>
                     </div>
                   </div>
@@ -49,8 +49,8 @@ const SocFactsComponent = () => {
                   <div className="row">
                     <div className="col-12">
                       <div className="count-area-content new-students">
-                        <div className="count-digit">245</div>
-                        <div className="count-title">C Wing Points</div>
+                        <div className="count-digit">500</div>
+                        <div className="count-title">Celebrations</div>
                       </div>
                     </div>
                   </div>
@@ -59,8 +59,8 @@ const SocFactsComponent = () => {
                   <div className="row">
                     <div className="col-12">
                       <div className="count-area-content new-students">
-                        <div className="count-digit">854</div>
-                        <div className="count-title">D Wing Points</div>
+                        <div className="count-digit">4</div>
+                        <div className="count-title">Total wings</div>
                       </div>
                     </div>
                   </div>
