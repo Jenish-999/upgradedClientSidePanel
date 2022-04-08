@@ -162,11 +162,11 @@ const Wrapper = styled.div`
 
     .open-nav {
       left: 0;
-      transition: 1s !important;
+      transition: all 0.8s !important;
     }
     .close-nav {
       left: -60%;
-      transition: 1s !important;
+      transition: all 0.9s !important;
     }
   }
 `;

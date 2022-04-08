@@ -30,7 +30,7 @@ const BannerComponent = () => {
                   </p>
                   <div className="main-button-red">
                     <div className="scroll-to-section">
-                      <NavLink to="/about">About Us</NavLink>
+                      <NavLink to="/about">Reasons to choose us</NavLink>
                     </div>
                   </div>
                 </div>

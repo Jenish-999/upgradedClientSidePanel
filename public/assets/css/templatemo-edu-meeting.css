@@ -374,16 +374,16 @@ header
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
-.background-header .main-nav .nav li a {
+.background-header .main-nav  li a {
   color: #1e1e1e !important;
 }
 
 .background-header .logo,
-.background-header .main-nav .nav li a {
+.background-header .main-nav  li a {
   color: #1e1e1e !important;
 }
 
-.background-header .main-nav .nav li:hover a {
+.background-header .main-nav li:hover a {
   color: #fb5849 !important;
 }
 

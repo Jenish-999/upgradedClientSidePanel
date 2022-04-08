@@ -9,6 +9,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMaintenanceFunction } from "../redux/maintenanceReducer/action";
+import ReceiptFunction from "../components/Details/ReceiptFunction";
+import PrintComponent from "../components/Details/PrintComponent";
 
 const Details = () => {
   const [searchWing, setSearchWing] = useState("");
@@ -321,9 +323,61 @@ const Details = () => {
                                       </li>
                                     </ul>
                                   </TableData4>
-                                  <TableData5 className="text-left">
+                                  <TableData5
+                                    className="text-left"
+                                    // type="button"
+                                    data-toggle="modal"
+                                    data-target="#exampleModalLong"
+                                  >
                                     PRINT
                                   </TableData5>
+                                  {/* Modal */}
+                                  <div
+                                    className="modal fade "
+                                    id="exampleModalLong"
+                                    role="dialog"
+                                    aria-labelledby="exampleModalLongTitle"
+                                    aria-hidden="true"
+                                  >
+                                    <div
+                                      className="modal-dialog modal-lg"
+                                      role="document"
+                                    >
+                                      <div className="modal-content">
+                                        <div className="modal-header">
+                                          <h5
+                                            className="modal-title"
+                                            id="exampleModalLongTitle"
+                                          >
+                                            Receipt Print
+                                          </h5>
+                                          <button
+                                            type="button"
+                                            className="close btn btn-danger"
+                                            data-dismiss="modal"
+                                            aria-label="Close"
+                                          >
+                                            <span aria-hidden="true">×</span>
+                                          </button>
+                                        </div>
+                                        <div className="modal-body">
+                                          {/* <ReceiptFunction /> */}
+                                          <PrintComponent fullName={fullName} />
+                                        </div>
+                                        <div className="modal-footer">
+                                          <button
+                                            type="button"
+                                            className="btn btn-secondary"
+                                            data-dismiss="modal"
+                                          >
+                                            Close
+                                          </button>
+                                          {/* <PrintComponent /> */}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Modal End*/}
                                 </tr>
                               );
                             })}
@@ -336,7 +390,7 @@ const Details = () => {
                 <div className="row">
                   <div className="col-md-12  p-3">
                     <div className="container-fluid table-responsive">
-                      <div className="wrapper-container-for-two mb-1 d-flex justify-content-between">
+                      <WapperContainerForTwo className="wrapper-container-for-two mb-1 d-flex justify-content-between">
                         <h5 className="text-uppercase text-left">
                           Members View
                         </h5>
@@ -355,7 +409,7 @@ const Details = () => {
                             <option value="d">D-wing</option>
                           </select>
                         </div>
-                      </div>
+                      </WapperContainerForTwo>
                       <table className="table-fill text-uppercase">
                         <thead>
                           <tr>
@@ -733,6 +787,12 @@ td.text-right {
   text-align: right;
 }
 
+`;
+
+const WapperContainerForTwo = Styled.div` 
+ .wrapper-container-for-two{
+   width: auto;
+ }
 `;
 const TableData1 = Styled.td`
 transition: all 2s ease-in-out;
