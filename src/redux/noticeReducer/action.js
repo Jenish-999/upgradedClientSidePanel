@@ -21,7 +21,7 @@ export const allNoticeDisplayFunction = () => {
     )
       .then((resp) => resp.json())
       .then((result) => {
-        console.log("All Notice : ", result);
+        // console.log("All Notice : ", result);
         dispatch(allNoticeDisplayAction(result));
       });
   };

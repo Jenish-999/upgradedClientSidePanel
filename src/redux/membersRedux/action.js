@@ -42,7 +42,7 @@ export const allMembersDetailsFunction = () => {
     )
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         dispatch(allMembersDetailsAction(data));
       });
   };
@@ -63,7 +63,7 @@ export const memberDetailsFunction = (localId) => {
       .then((resp) => resp.json())
       .then((data) => {
         // if (data.localId) {
-        console.log("Mera Data ID ", data.localId);
+        // console.log("Mera Data ID ", data.localId);
         dispatch(memberDetailsAction(data));
         // } else {
         //   toast.error("Sorry, No Access");

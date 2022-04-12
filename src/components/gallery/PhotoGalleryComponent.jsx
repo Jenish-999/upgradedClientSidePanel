@@ -10,7 +10,7 @@ const PhotoGalleryComponent = () => {
   useEffect(() => {
     dispatch(getImgFunction());
   }, []);
-  console.log("MAIN SCREEN IMAGE DATA ", imageStorage);
+  // console.log("MAIN SCREEN IMAGE DATA ", imageStorage);
 
   return (
     <Wrapper>

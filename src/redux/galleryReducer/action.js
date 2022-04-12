@@ -17,11 +17,11 @@ export const getImgFunction = () => {
     })
       .then((resp) => resp.json())
       .then((result) => {
-        console.log("Image Data", result);
+        // console.log("Image Data", result);
         dispatch(getImgAction(result));
       })
       .catch((err) => {
-        console.log("Image Data Error : ", err);
+        // console.log("Image Data Error : ", err);
       });
   };
 };

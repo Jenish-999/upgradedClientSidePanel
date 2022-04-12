@@ -44,7 +44,7 @@ const ContactComponent = () => {
     validate,
     onSubmit: (values, { resetForm }) => {
       if (values && values !== "") {
-        console.log("Values: ", values);
+        // console.log("Values: ", values);
         dispatch(messageSendFunction(values));
         resetForm(values);
       }

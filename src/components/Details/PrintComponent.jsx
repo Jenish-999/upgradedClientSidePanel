@@ -14,15 +14,15 @@ function PrintComponent({ fullName }) {
   const [text, setText] = React.useState("old boring text");
 
   const handleAfterPrint = React.useCallback(() => {
-    console.log("`onAfterPrint` called");
+    // console.log("`onAfterPrint` called");
   }, []);
 
   const handleBeforePrint = React.useCallback(() => {
-    console.log("`onBeforePrint` called");
+    // console.log("`onBeforePrint` called");
   }, []);
 
   const handleOnBeforeGetContent = React.useCallback(() => {
-    console.log("`onBeforeGetContent` called");
+    // console.log("`onBeforeGetContent` called");
     setLoading(true);
     setText("Loading new text...");
 
@@ -58,7 +58,7 @@ function PrintComponent({ fullName }) {
     (state) => state.maintenance.maintenanceStorage
   );
 
-  console.log("Print Component : ", maintenanceData);
+  // console.log("Print Component : ", maintenanceData);
 
   return (
     <>

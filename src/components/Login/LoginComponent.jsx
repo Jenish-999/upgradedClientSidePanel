@@ -76,7 +76,7 @@ const LoginComponent = () => {
       navigate("/details");
       toast.success("Success Notice");
     } else {
-      console.log("Hello I am Logout");
+      // console.log("Hello I am Logout");
     }
   }, [isMemberLogin]);
 

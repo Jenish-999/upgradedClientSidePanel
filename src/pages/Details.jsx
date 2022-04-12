@@ -41,7 +41,7 @@ const Details = () => {
 
   useEffect(() => {
     if (memberDetails && memberDetails !== "") {
-      console.log("SINGLE USER DATA DETAILS ID", memberDetails);
+      // console.log("SINGLE USER DATA DETAILS ID", memberDetails);
       dispatch(getMaintenanceFunction(id));
     }
   }, [memberDetails]);
@@ -102,9 +102,9 @@ const Details = () => {
   // console.log("New Members in Wing : ", searchResult);
 
   function handleSelectChange(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setSearchWing(e.target.value);
-    console.log(finalListOfwings);
+    // console.log(finalListOfwings);
     const selectedWingData = finalListOfwings.filter(
       (item) => item.wing.toLowerCase() === e.target.value.toLowerCase()
     );

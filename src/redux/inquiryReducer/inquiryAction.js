@@ -23,12 +23,12 @@ export const messageSendFunction = (values) => {
       .then((resp) => resp.json())
       .then((data) => {
         if (data.name) {
-          console.log("Data Inquery : ", data);
+          // console.log("Data Inquery : ", data);
           toast.success("Response Recorded");
         }
       })
       .catch((err) => {
-        console.log("ERROR : ", err);
+        // console.log("ERROR : ", err);
         toast.error("Sorry, try later");
       });
   };

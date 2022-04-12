@@ -23,7 +23,7 @@ export const getMaintenanceFunction = (id) => {
     )
       .then((resp) => resp.json())
       .then((result) => {
-        console.log("Hello Mainteance Data : ", result);
+        // console.log("Hello Mainteance Data : ", result);
         dispatch(getMaintenanceAction(result));
       });
   };

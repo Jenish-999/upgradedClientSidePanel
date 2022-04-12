@@ -15,7 +15,7 @@ class ReceiptFunction extends React.PureComponent {
     //   dispatch(getMaintenanceFunction(id));
     // }, []);
 
-    console.log("Receipt Fnction : ", maintenanceData);
+    // console.log("Receipt Fnction : ", maintenanceData);
 
     return (
       <>

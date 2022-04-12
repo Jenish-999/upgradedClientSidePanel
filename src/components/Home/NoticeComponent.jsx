@@ -15,7 +15,7 @@ const NoticeComponent = () => {
     dispatch(allNoticeDisplayFunction());
   }, []);
 
-  console.log("All Notice Data", allNoticeStorage);
+  // console.log("All Notice Data", allNoticeStorage);
   useEffect(() => {
     AOS.init({
       duration: 1000,

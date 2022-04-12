@@ -13,7 +13,7 @@ const ProfileEvents = () => {
   useEffect(() => {
     dispatch(viewDataFunction());
   }, []);
-  console.log("Events List: ", getAllEvents);
+  // console.log("Events List: ", getAllEvents);
 
   let months = [
     "Jan",
