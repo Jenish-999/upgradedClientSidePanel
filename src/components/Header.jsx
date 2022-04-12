@@ -105,6 +105,8 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+ color: #fb5849 !important;
+  }
   .custom-nav {
     display: flex;
     gap: 30px;
@@ -117,6 +119,8 @@ const Wrapper = styled.div`
       :hover {
         color: #ffb319;
       }
+
+     
     }
   }
 

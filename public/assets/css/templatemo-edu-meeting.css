@@ -469,13 +469,13 @@ header
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li:hover a,
-.header-area .main-nav .nav li a.active {
+.header-area .main-nav  li:hover a,
+.header-area .main-nav  li a.active {
   color: #f5a425 !important;
 }
 
-.background-header .main-nav .nav li:hover a,
-.background-header .main-nav .nav li a.active {
+.background-header .main-nav li:hover a,
+.background-header .main-nav li a.active {
   color: #f5a425 !important;
   opacity: 1;
 }
